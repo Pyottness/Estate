@@ -1,0 +1,41 @@
+<template>
+
+  <div class="new">
+    <h1>New!</h1>
+    <p>Find all the new houses that have just become available on the market.</p>
+  </div>
+
+  <section class="new-card">
+    <Card
+      v-for="item in listings.filter(i => i.onSale === false)"
+      :name="item.name"
+      :image="item.image"
+      :price="item.price"
+      :quantity="item.quantity"
+      :inStock="item.inStock"
+      :onSale="item.onSale"
+      :key="item.id"
+    />
+  </section>
+
+</template>
+
+<script>
+import Card from '../components/Card.vue'
+import { mapGetters, mapState } from 'vuex'
+export default {
+name: 'Home',
+components: {
+  Card
+},
+computed: {
+  ...mapGetters({
+
+  }),
+  ...mapState({
+    shoppingCart: 'shoppingCart',
+    listings: 'listings'
+  }),
+},
+}
+</script>

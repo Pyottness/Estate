@@ -1,26 +1,47 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavTop from './components/NavTop.vue'
+import Footer from './components/Footer.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    NavTop,
+    Footer,
+  },
+  computed: {
+		...mapState({
+      shoppingCart: 'shoppingCart',
+      listings: 'listings'
+    }),
+},
 }
 </script>
+    <template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+    <NavTop />
+    <Footer />
+
+    </template>
+
+  <style>
+
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+  body {
+    position: relative;
+    top: 70px;
+    padding-left: 10px;
+    padding-bottom: 100px;
+    color: #606c76;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6;
+  }
+
+  </style>
