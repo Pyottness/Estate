@@ -6,6 +6,7 @@
   </div>
 
   <section class="new-card">
+    <div class="card-container">
     <Card
       v-for="item in listings.filter(i => i.onSale === false)"
       :name="item.name"
@@ -16,6 +17,7 @@
       :onSale="item.onSale"
       :key="item.id"
     />
+    </div>
   </section>
 
 </template>
@@ -39,3 +41,10 @@ computed: {
 },
 }
 </script>
+
+<style>
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, max-content));
+}
+</style>

@@ -6,8 +6,9 @@
     <p>
       Have you ever dreamed of living in sunny Spain? Look no further! <br> We have you covered. We have a collection of the most beautiful houses on the market. <br> Don’t take our word for it though! Scroll down and check for yourself!
     </p>
-    <section class="listings">
-      <h2>Listings</h2>
+    <h2>Listings</h2>
+    <section>
+      <div class="card-container">
       <Card
         v-for="item in listings"
         :name="item.name"
@@ -18,6 +19,7 @@
         :onSale="item.onSale"
         :key="item.id"
       />
+    </div>
     </section>
 
   </div>
@@ -27,6 +29,7 @@
 <script>
 import Card from '../components/Card.vue'
 import { mapGetters, mapState } from 'vuex'
+
 export default {
   name: 'Home',
   components: {
@@ -39,17 +42,18 @@ export default {
       shoppingCart: 'shoppingCart',
       listings: 'listings'
     })
-  }
+  },
 }
 </script>
 
 <style>
-
-.listings {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+h2 {
+  display: flex;
+  justify-content: center;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, max-content));
 }
 
 </style>

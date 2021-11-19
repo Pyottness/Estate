@@ -74,7 +74,7 @@ methods: {
 </script>
 
 <template>
-			<div class="card">
+	<div class="card">
 	<router-link :to="'/' + this.name"><img class="card-image" :src="image.source" :alt="image.alt" /></router-link>
 	<div>
 		<h3>{{ name }}</h3>
@@ -92,10 +92,9 @@ methods: {
 </template>
 
 <style>
-
 .card {
 	display: flex;
-	width: 500px;
+	width: 400px;
 	justify-content: space-between;
 	margin: 10px;
 	background-color: #D3D3D3;
@@ -103,11 +102,12 @@ methods: {
 }
 .card-image {
 	display: flex;
-	width: 500px;
+	width: 400px;
 	justify-content: space-between;
 	margin-bottom: 30px;
-	max-width: 300px;
+	max-width: 250px;
 	border-radius: 25px;
 	padding: 5px;
 }
+
 </style>

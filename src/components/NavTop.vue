@@ -25,7 +25,7 @@ export default {
 				<router-link to="/privacy" exact-active-class="exact-active">Privacy</router-link>
     </div>
 </nav>
-<router-view/>
+
 </template>
 
 <style scoped>
@@ -35,11 +35,13 @@ export default {
 		font-size: 40px;
 		font-family: fangsong;
 		line-height: 10px;
+		padding-left: 10px;
 	}
 	.logo{
 		float: left;
 		width: 90px;
 		height: 70px;
+		padding-left: 10px;
 	}
   nav {
     position: fixed;
