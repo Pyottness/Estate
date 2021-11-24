@@ -20,6 +20,10 @@ export default {
 				type: String,
 				required: true
 			},
+			siteUrl: {
+				type: String,
+				required: true
+			},
       description: {
 				type: String,
 				required: true
@@ -54,10 +58,11 @@ export default {
 			house: {
 					name: this.name,
 					image: this.image,
-					inStock: this.stock,
+					inStock: this.inStock,
 					price: this.price,
 					quantity: this.quantity,
 					onSale: this.onSale,
+					siteUrl: this.siteUrl,
 					id: this.id,
 			},
     }
@@ -76,7 +81,7 @@ export default {
     }
 },
 methods: {
-    ...mapActions(['updateShoppingCart'])
+    ...mapActions(['updateShoppingCart']),
   },
 }
 </script>

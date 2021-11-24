@@ -52,7 +52,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Cart.vue')
   },
   {
-    path: '/White%20House',
+    path: '/house/1',
     name: '1',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -60,7 +60,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "estate" */ '../views/1.vue')
   },
   {
-    path: '/Orange%20Brick%20House',
+    path: '/house/2',
     name: '2',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -68,7 +68,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "estate" */ '../views/2.vue')
   },
   {
-    path: '/White%20Modern%20House',
+    path: '/house/3',
     name: '3',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -76,7 +76,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "estate" */ '../views/3.vue')
   },
   {
-    path: '/White%20Villa',
+    path: '/house/4',
     name: '4',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -84,7 +84,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "estate" */ '../views/4.vue')
   },
   {
-    path: '/Luxury%20Modern%20Home',
+    path: '/house/5',
     name: '5',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -92,7 +92,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "estate" */ '../views/5.vue')
   },
   {
-    path: '/Modern%20Brick%20House',
+    path: '/house/6',
     name: '6',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

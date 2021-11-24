@@ -16,7 +16,7 @@ export default createStore({
                     location: "Marbella",
                     rooms: "3 bedrooms, 1 kitchen , 1 lounge and 2 restrooms.",
                     id: 1,
-                    url: "1",
+                    siteUrl: '/house/1',
                     inStock: true,
                     quantity: 1,
                     onSale: false,
@@ -32,7 +32,7 @@ export default createStore({
                     location: "Galicia",
                     rooms: "4 bedrooms, 1 kitchen , 2 lounges and 2 restrooms.",
                     id: 2,
-                    url: "2",
+                    siteUrl: '/house/2',
                     inStock: true,
                     quantity: 1,
                     onSale: false,
@@ -48,7 +48,7 @@ export default createStore({
                     location: "Benalmádena",
                     rooms: "3 bedrooms, 1 kitchen , 1 lounge and 2 restrooms.",
                     id: 3,
-                    url: "3",
+                    siteUrl: '/house/3',
                     inStock: true,
                     quantity: 1,
                     onSale: false,
@@ -64,7 +64,7 @@ export default createStore({
                     location: "Coín",
                     rooms: "4 bedrooms, 1 kitchen , 1 lounge and 2 restrooms.",
                     id: 4,
-                    url: "4",
+                    siteUrl: '/house/4',
                     inStock: true,
                     quantity: 1,
                     onSale: true,
@@ -80,7 +80,7 @@ export default createStore({
                     location: "Benalmádena",
                     rooms: "3 bedrooms, 1 kitchen , 1 lounge and 2 restrooms.",
                     id: 5,
-                    url: "5",
+                    siteUrl: '/house/5',
                     inStock: true,
                     quantity: 1,
                     onSale: true,
@@ -96,7 +96,7 @@ export default createStore({
                     location: "Torremolinos",
                     rooms: "3 bedrooms, 1 kitchen , 1 lounge and 2 restrooms.",
                     id: 6,
-                    url: "6",
+                    siteUrl: '/house/6',
                     inStock: true,
                     quantity: 1,
                     onSale: true,
@@ -112,7 +112,7 @@ export default createStore({
     },
     REMOVE_ITEMS_FROM_SHOPPING_CART(state, payload) {
       state.shoppingCart.splice(payload, 1);
-    }
+    },
   },
   actions: {
     updateShoppingCart({ commit }, payload) {

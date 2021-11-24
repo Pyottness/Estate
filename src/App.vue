@@ -20,7 +20,7 @@ export default {
     <template>
 
     <NavTop />
-    <router-view/>
+    <router-view />
     <Footer />
 
     </template>

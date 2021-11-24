@@ -5,7 +5,7 @@ import BaseButton from './BaseButton.vue'
 export default {
 	name: 'Card',
 	components: {
-		BaseButton
+		BaseButton,
 	},
 	props: {
 			image: {
@@ -17,6 +17,10 @@ export default {
 				required: true
 			},
 			name: {
+				type: String,
+				required: true
+			},
+			siteUrl: {
 				type: String,
 				required: true
 			},
@@ -36,19 +40,16 @@ export default {
 				type: Number,
 				required: true
 			},
-			url: {
-				type: String,
-				required: true
-			},
 	},
 	data() {
     return {
 			house: {
 					name: this.name,
 					image: this.image,
-					inStock: this.stock,
+					inStock: this.inStock,
 					price: this.price,
 					quantity: this.quantity,
+					siteUrl: this.siteUrl,
 					onSale: this.onSale,
 					id: this.id,
 			},
@@ -75,7 +76,7 @@ methods: {
 
 <template>
 	<div class="card">
-	<router-link :to="'/' + this.name"><img class="card-image" :src="image.source" :alt="image.alt" /></router-link>
+		<slot name="link"></slot>
 	<div>
 		<h3>{{ name }}</h3>
 		<p>Price: {{ generatedPrice }} <span v-if="onSale">(10% off!)</span></p>

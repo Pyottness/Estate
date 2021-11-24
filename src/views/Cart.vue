@@ -1,7 +1,7 @@
 
 <template>
   <section class="cart">
-      <h2> Shopping Cart:  </h2>
+      <h2> Shopping Cart: </h2>
       <shoppingCartCard
         v-for="item in shoppingCart"
         :name="item.name"
@@ -10,8 +10,11 @@
         :quantity="item.quantity"
         :inStock="item.inStock"
         :onSale="item.onSale"
-        :key="item.name"
-        />
+        :key="item.id">
+        <template v-slot:link>
+          <router-link :to="`${ item.siteUrl }`"><img class="shoppingcartcard-image" :src="item.image.source" :alt="item.image.alt" /></router-link>
+        </template>
+      </shoppingCartCard>
     </section>
 </template>
 

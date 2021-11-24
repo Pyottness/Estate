@@ -20,6 +20,10 @@ export default {
 				type: String,
 				required: true
 			},
+			siteUrl: {
+				type: String,
+				required: true
+			},
 			price: {
 				type: Number,
 				required: true
@@ -46,6 +50,7 @@ export default {
 					price: this.price,
 					quantity: this.quantity,
 					onSale: this.onSale,
+					siteUrl: this.siteUrl,
 					id: this.id,
 			},
     }
@@ -68,8 +73,8 @@ methods: {
 </script>
 
 <template>
-			<div class="shoppingcart">
-	<img class="shoppingcartcard-image" :src="image.source" :alt="image.alt" />
+	<div class="shoppingcart">
+		<slot name="link"></slot>
 	<div>
 		<h3>{{ name }}</h3>
 		<p>Price: {{ generatedPrice }} <span v-if="onSale">(10% off!)</span></p>

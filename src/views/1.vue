@@ -3,9 +3,9 @@ import Estate from '../components/Estate.vue'
 import { mapGetters, mapState } from 'vuex'
 
 export default {
-  name: 'Home',
+  name: '1',
   components: {
-    Estate
+    Estate,
   },
   computed: {
     ...mapGetters({
@@ -14,7 +14,7 @@ export default {
       shoppingCart: 'shoppingCart',
       listings: 'listings'
     })
-  }
+  },
 }
 </script>
 
