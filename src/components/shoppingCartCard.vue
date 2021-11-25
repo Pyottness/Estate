@@ -8,50 +8,50 @@ export default {
 		BaseButton
 	},
 	props: {
-			image: {
-				type: Object,
-				required: true
-			},
-			inStock: {
-				type: Boolean,
-				required: true
-			},
-			name: {
-				type: String,
-				required: true
-			},
-			siteUrl: {
-				type: String,
-				required: true
-			},
-			price: {
-				type: Number,
-				required: true
-			},
-			quantity: {
-				type: Number,
-				default: 1
-			},
-			onSale: {
-				type: Boolean,
-				required: true
-			},
-			id: {
-				type: Number,
-				required: true
-			}
+		image: {
+			type: Object,
+			required: true
+		},
+		inStock: {
+			type: Boolean,
+			required: true
+		},
+		name: {
+			type: String,
+			required: true
+		},
+		siteUrl: {
+			type: String,
+			required: true
+		},
+		price: {
+			type: Number,
+			required: true
+		},
+		quantity: {
+			type: Number,
+			default: 1
+		},
+		onSale: {
+			type: Boolean,
+			required: true
+		},
+		id: {
+			type: Number,
+			required: true
+		}
 	},
 	data() {
     return {
 			house: {
-					name: this.name,
-					image: this.image,
-					inStock: this.stock,
-					price: this.price,
-					quantity: this.quantity,
-					onSale: this.onSale,
-					siteUrl: this.siteUrl,
-					id: this.id,
+				name: this.name,
+				image: this.image,
+				inStock: this.stock,
+				price: this.price,
+				quantity: this.quantity,
+				onSale: this.onSale,
+				siteUrl: this.siteUrl,
+				id: this.id,
 			},
     }
   },

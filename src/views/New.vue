@@ -13,13 +13,11 @@
       :image="item.image"
       :price="item.price"
       :quantity="item.quantity"
+      :siteUrl="item.siteUrl"
       :inStock="item.inStock"
       :onSale="item.onSale"
-      :key="item.id">
-      <template v-slot:link>
-        <router-link :to="`${ item.siteUrl }`"><img class="card-image" :src="item.image.source" :alt="item.image.alt" /></router-link>
-      </template>
-    </Card>
+      :key="item.id"
+    />
     </div>
   </section>
 

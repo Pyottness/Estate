@@ -28,6 +28,7 @@ export default {
       :location="item.location"
       :price="item.price"
       :quantity="item.quantity"
+      :siteUrl="item.siteUrl"
       :inStock="item.inStock"
       :onSale="item.onSale"
       :key="item.id"

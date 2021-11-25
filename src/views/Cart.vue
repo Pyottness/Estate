@@ -8,6 +8,7 @@
         :image="item.image"
         :price="item.price"
         :quantity="item.quantity"
+        :siteUrl="item.siteUrl"
         :inStock="item.inStock"
         :onSale="item.onSale"
         :key="item.id">
