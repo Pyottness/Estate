@@ -1,8 +1,8 @@
 <script>
-import HomeIcon from 'vue-material-design-icons/Home.vue';
-import NewBoxIcon from 'vue-material-design-icons/NewBox.vue';
-import SaleIcon from 'vue-material-design-icons/Sale.vue';
-import CartIcon from 'vue-material-design-icons/Cart.vue';
+import HomeIcon from '../components/material-design-icons/Home.vue';
+import NewBoxIcon from '../components/material-design-icons/NewBox.vue';
+import SaleIcon from '../components/material-design-icons/Sale.vue';
+import CartIcon from '../components/material-design-icons/Cart.vue';
 
 export default {
 	name: 'Footer',
