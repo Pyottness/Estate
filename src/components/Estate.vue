@@ -115,4 +115,19 @@ methods: {
 .estate-image {
   width: 800px;
 }
+@media only screen and (max-width: 350px) {
+	.estate-image {
+		width: 260px;
+	}
+}
+@media only screen and (min-device-width: 351px) and (max-device-width: 450px) {
+	.estate-image {
+		width: 340px;
+	}
+}
+@media only screen and (min-device-width: 750px) and (max-device-width: 800px) {
+	.estate-image {
+		width: 720px;
+	}
+}
 </style>

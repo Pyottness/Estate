@@ -24,4 +24,16 @@ button {
 button:active {
   color: yellow;
 }
+
+@media screen and (max-width: 600px) {
+  button {
+    border-radius: 25px;
+    font-size: 0.8em;
+    background-color: black;
+    color: white;
+  }
+  button:active {
+    color: yellow;
+  }
+}
 </style>

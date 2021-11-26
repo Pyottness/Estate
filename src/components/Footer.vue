@@ -50,5 +50,4 @@ footer {
 .exact-active > .material-design-icon.icon-4x > .material-design-icon__svg {
 	color: yellow;
 }
-
 </style>

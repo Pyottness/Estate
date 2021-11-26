@@ -3,9 +3,17 @@
 
   <div class="home">
     <h1>Where dreams come true</h1>
-    <p>
-      Have you ever dreamed of living in sunny Spain? Look no further! <br> We have you covered. We have a collection of the most beautiful houses on the market. <br> Don’t take our word for it though! Scroll down and check for yourself!
+    <div id="container">
+      <p>
+      Have you ever dreamed of living in sunny Spain? Look no further!
     </p>
+    <p>
+    We have you covered. We have a collection of the most beautiful houses on the market.
+  </p>
+  <p>
+  Don’t take our word for it though! Scroll down and check for yourself!
+</p>
+  </div>
     <h2>Listings</h2>
     <section>
       <div class="card-container">
@@ -18,7 +26,7 @@
         :siteUrl="item.siteUrl"
         :inStock="item.inStock"
         :onSale="item.onSale"
-        :key="item.id"  
+        :key="item.id"
       />
     </div>
     </section>
@@ -56,5 +64,4 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, max-content));
 }
-
 </style>

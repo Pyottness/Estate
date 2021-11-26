@@ -96,7 +96,7 @@ methods: {
 
 .shoppingcart {
 	display: flex;
-	width: 500px;
+	width: 400px;
 	justify-content: space-between;
 	margin: 10px;
 	background-color: #D3D3D3;
@@ -104,11 +104,59 @@ methods: {
 }
 .shoppingcartcard-image {
 	display: flex;
-	width: 500px;
+	width: 400px;
 	justify-content: space-between;
 	margin-bottom: 30px;
-	max-width: 300px;
+	width: 250px;
+	height: 250px;
 	border-radius: 25px;
 	padding: 5px;
+}
+@media only screen and (max-width: 350px) {
+	.shoppingcart {
+		display: flex;
+		width: 230px;
+		justify-content: space-between;
+		margin-bottom: 5px;
+		background-color: #D3D3D3;
+		border-radius: 25px;
+	}
+	.shoppingcartcard-image {
+		display: flex;
+		width: 230px;
+		justify-content: space-between;
+		width: 150px;
+		height: 150px;
+		border-radius: 25px;
+		padding: 5px;
+	}
+	h3 {
+		font-size: 1em;
+	}
+	p {
+		font-size: 0.8em;
+	}
+	.label {
+		font-size: 0.8em;
+	}
+}
+@media only screen and (min-device-width: 351px) and (max-device-width: 450px) {
+	.shoppingcart {
+		display: flex;
+		width: 320px;
+		justify-content: space-between;
+		margin-bottom: 5px;
+		background-color: #D3D3D3;
+		border-radius: 25px;
+	}
+	.shoppingcartcard-image {
+		display: flex;
+		width: 320px;
+		justify-content: space-between;
+		width: 210px;
+		height: 210px;
+		border-radius: 25px;
+		padding: 5px;
+	}
 }
 </style>
