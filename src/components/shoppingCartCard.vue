@@ -1,5 +1,5 @@
 <script>
-
+import { mapState } from 'vuex'
 import BaseButton from './BaseButton.vue'
 
 export default {
@@ -56,6 +56,9 @@ export default {
     }
   },
   computed: {
+		...mapState({
+      shoppingCart: 'shoppingCart',
+    }),
     generatedPrice() {
       if (this.onSale) {
         return (this.price * 0.9).toFixed(2)
@@ -67,7 +70,7 @@ export default {
 methods: {
    purchase() {
      alert('This is not a real website!! It is just for show!!!')
-  }
+  },
   },
 }
 </script>
@@ -87,6 +90,9 @@ methods: {
 				Purchase
 			</BaseButton>
     </div>
+		<div>
+			<slot name="remove"></slot>
+		</div>
 		</div>
 	</div>
 </div>

@@ -15,6 +15,11 @@
         <template v-slot:link>
           <router-link :to="`${ item.siteUrl }`"><img class="shoppingcartcard-image" :src="item.image.source" :alt="item.image.alt" /></router-link>
         </template>
+        <template v-slot:remove>
+          <BaseButton @click="removeShoppingCart(item)">
+            Remove
+          </BaseButton>
+        </template>
       </shoppingCartCard>
     </section>
 </template>
@@ -22,11 +27,13 @@
 <script>
 import shoppingCartCard from '../components/shoppingCartCard.vue'
 import { mapState, mapActions } from 'vuex'
+import BaseButton from '../components/BaseButton.vue'
 
 export default {
   name: 'Cart',
   components: {
-    shoppingCartCard
+    shoppingCartCard,
+    BaseButton
   },
   computed: {
     ...mapState({
@@ -36,6 +43,7 @@ export default {
   },
   methods: {
     ...mapActions(['updateShoppingCart']),
+    ...mapActions(['removeShoppingCart']),
   }
 }
 </script>

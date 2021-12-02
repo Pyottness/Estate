@@ -111,12 +111,15 @@ export default createStore({
       state.shoppingCart.push(payload);
     },
     REMOVE_ITEMS_FROM_SHOPPING_CART(state, payload) {
-      state.shoppingCart.splice(payload, 1);
+      state.shoppingCart.splice(state.shoppingCart.indexOf(payload), 1);
     },
   },
   actions: {
     updateShoppingCart({ commit }, payload) {
       commit('ADD_ITEMS_TO_SHOPPING_CART', payload)
+    },
+    removeShoppingCart({ commit }, payload) {
+      commit('REMOVE_ITEMS_FROM_SHOPPING_CART', payload)
     },
   },
   modules: {
