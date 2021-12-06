@@ -1,28 +1,38 @@
 <script>
 export default {
-	name: 'NavTop'
+	name: 'NavTop',
+	data() {
+		return {
+			toggle: false,
+		}
+	},
+	methods: {
+		closeMenu() {
+			this.toggle = !this.toggle
+		}
+	},
 }
 </script>
 
 <template>
 <nav>
-		<img alt="Homes in Spain logo" src="../assets/logo.png" class="logo">
-		<h1 alt="Title">Homes in Spain</h1>
-    <input type="checkbox" id="toggle"/>
+		<router-link to="/" exact-active-class="exact-active"><img alt="Homes in Spain logo" src="../assets/logo.png" class="logo"></router-link>
+		<router-link to="/" exact-active-class="exact-active"><h1 alt="Title">Homes in Spain</h1></router-link>
+    <input v-model="toggle" switch="false" type="checkbox" id="toggle"/>
     <label for="toggle">
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>
     </label>
     <div class="menu">
-			<router-link to="/" exact-active-class="exact-active">Home</router-link>
-			<router-link to="/new" exact-active-class="exact-active">New</router-link>
-			<router-link to="/sale" exact-active-class="exact-active">Sale</router-link>
-			<router-link to="/cart" exact-active-class="exact-active">Cart</router-link>
-			<router-link to="/map" exact-active-class="exact-active">Map</router-link>
-			<router-link to="/about" exact-active-class="exact-active">About</router-link>
-			<router-link to="/contact" exact-active-class="exact-active">Contact</router-link>
-			<router-link to="/privacy" exact-active-class="exact-active">Privacy</router-link>
+			<router-link to="/" exact-active-class="exact-active" @click="closeMenu()">Home</router-link>
+			<router-link to="/new" exact-active-class="exact-active" @click="closeMenu()">New</router-link>
+			<router-link to="/sale" exact-active-class="exact-active" @click="closeMenu()">Sale</router-link>
+			<router-link to="/cart" exact-active-class="exact-active" @click="closeMenu()">Cart</router-link>
+			<router-link to="/map" exact-active-class="exact-active" @click="closeMenu()">Map</router-link>
+			<router-link to="/about" exact-active-class="exact-active" @click="closeMenu()">About</router-link>
+			<router-link to="/contact" exact-active-class="exact-active" @click="closeMenu()">Contact</router-link>
+			<router-link to="/privacy" exact-active-class="exact-active" @click="closeMenu()">Privacy</router-link>
     </div>
 </nav>
 
