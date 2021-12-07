@@ -79,7 +79,7 @@ export default createStore({
                     },
                     price: 300000,
                     description: 'Settle down in a lovely beach front property that will charm you away.',
-                    location: 'Benalmádena',
+                    location: 'Tarifa, Cádiz',
                     rooms: '3 bedrooms, 1 kitchen , 1 lounge and 2 restrooms.',
                     id: 5,
                     siteUrl: '/house/5',
