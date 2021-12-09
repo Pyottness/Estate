@@ -164,7 +164,8 @@ export default {
 
 .map {
   height: 75vh;
-  width: 60vw;
+  width: 100%;
+  z-index: 1;
 }
 .leaflet-popup-content-wrapper {
     width: 450px;
@@ -172,8 +173,8 @@ export default {
 
 @media only screen and (max-width: 350px) {
   .map {
-    height: 75vh;
-    width: 260px;
+    height: 70vh;
+    width: 100%;
   }
   .leaflet-popup-content-wrapper {
       width: 280px;
@@ -181,8 +182,8 @@ export default {
 }
 @media only screen and (min-device-width: 351px) and (max-device-width: 450px) {
   .map {
-    height: 75vh;
-    width: 340px;
+    height: 70vh;
+    width: 100%;
   }
   .leaflet-popup-content-wrapper {
       width: 370px;

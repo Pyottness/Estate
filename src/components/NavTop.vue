@@ -17,14 +17,14 @@ export default {
 <template>
 <nav>
 		<router-link to="/" exact-active-class="exact-active"><img alt="Homes in Spain logo" src="../assets/logo.png" class="logo"></router-link>
-		<router-link to="/" exact-active-class="exact-active"><h1 alt="Title">Homes in Spain</h1></router-link>
+		<router-link to="/" exact-active-class="exact-active"><h1 class="title" alt="Title">Homes in Spain</h1></router-link>
     <input v-model="toggle" switch="false" type="checkbox" id="toggle"/>
-    <label for="toggle">
+    <label class="hamburger" for="toggle">
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>
     </label>
-    <div class="menu">
+    <div class="nav-top">
 			<router-link to="/" exact-active-class="exact-active" @click="closeMenu()">Home</router-link>
 			<router-link to="/new" exact-active-class="exact-active" @click="closeMenu()">New</router-link>
 			<router-link to="/sale" exact-active-class="exact-active" @click="closeMenu()">Sale</router-link>
@@ -38,8 +38,8 @@ export default {
 
 </template>
 
-<style scoped>
-	h1 {
+<style>
+	.title {
 		float: left;
 		color: White;
 		font-size: 40px;
@@ -64,29 +64,33 @@ export default {
 		height: 70px;
 		line-height: 70px;
   }
-  .menu {
+  .nav-top {
 		margin: 0 30px 0 0;
 		background: white;
 		height: 100vh;
+		position: fixed;
+		top: 70px;
+		text-align: center;
+		width: 100%;
+		display: none;
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
   }
-  .menu a {
+  .nav-top a {
 		clear: right;
 		text-decoration: none;
 		color: gray;
 		margin: 0 10px;
 		line-height: 9vh;
+		display: block;
+		border-bottom: 1px solid #EAEAEB;
   }
-
-  span {
-		color: #54D17A;
-  }
-  label {
-		display: none;
+  .hamburger {
 		position: fixed;
 		z-index: 10000;
+		display: block;
+		cursor: pointer;
 		top: 25px;
 		right: 25px;
 		bottom: 0px;
@@ -96,6 +100,7 @@ export default {
   }
   .bar {
 		display: block;
+		color: #54D17A;
 		width: 25px;
 		height: 3px;
 		margin: 5px auto;
@@ -103,42 +108,26 @@ export default {
 		transition: all 0.3s ease-in-out;
 		background-color: white;
   }
-  label {
-		display: block;
-		cursor: pointer;
-  }
-  #toggle:checked + label .bar:nth-child(2) {
+  #toggle:checked + .hamburger .bar:nth-child(2) {
 		opacity: 0;
   }
 
-  #toggle:checked + label .bar:nth-child(1) {
+  #toggle:checked + .hamburger .bar:nth-child(1) {
 		transform: translateY(8px) rotate(45deg);
   }
 
-  #toggle:checked + label .bar:nth-child(3) {
+  #toggle:checked + .hamburger .bar:nth-child(3) {
 		transform: translateY(-8px) rotate(-45deg);
   }
-  .menu {
-		position: fixed;
-		top: 70px;
-		text-align: center;
-		width: 100%;
-		display: none;
-  }
-  .menu a {
-		display: block;
-		border-bottom: 1px solid #EAEAEB;
-		margin: 0;
-  }
-	.menu a.exact-active {
+	.nav-top a.exact-active {
 		color: blue;
   }
-  #toggle:checked + label + .menu  {
+  #toggle:checked + .hamburger + .nav-top  {
 		display: block;
   }
 
 	@media only screen and (max-width: 350px) {
-		h1 {
+		.title {
 			float: left;
 			line-height: 70px;
 			color: White;
@@ -152,7 +141,7 @@ export default {
 			height: 70px;
 			padding-left: 5px;
 		}
-		label {
+		.hamburger {
 			position: fixed;
 			z-index: 10000;
 			top: 25px;
@@ -161,7 +150,7 @@ export default {
 		}
 	}
 	@media only screen and (min-device-width: 351px) and (max-device-width: 600px) {
-		h1 {
+		.title {
 			float: left;
 			line-height: 50px;
 			color: White;
@@ -175,7 +164,7 @@ export default {
 			height: 70px;
 			padding-left: 5px;
 		}
-		label {
+		.hamburger {
 			position: fixed;
 			z-index: 10000;
 			top: 25px;
