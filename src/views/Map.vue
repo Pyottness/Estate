@@ -120,6 +120,7 @@
     </l-map>
   </div>
 </template>
+
 <script>
 import {
   LMap,
@@ -154,9 +155,11 @@ export default {
       return [this.iconWidth, this.iconHeight];
     },
     ...mapState({
-      listings: 'listings'
+      listings: 'listings',
     })
   },
+  methods: {
+	},
 };
 </script>
 
@@ -165,7 +168,8 @@ export default {
 .map {
   height: 75vh;
   width: 100%;
-  z-index: 1;
+  display: fixed;
+  z-index: 0;
 }
 .leaflet-popup-content-wrapper {
     width: 450px;

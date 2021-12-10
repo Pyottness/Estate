@@ -28,12 +28,10 @@ export default {
   <style>
 
   html {
-    height: 100%;
     box-sizing: border-box;
     font-size: 62.5%;
   }
   body {
-    height: 100%;
     position: relative;
     top: 70px;
     padding-left: 10px;

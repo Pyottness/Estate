@@ -1,4 +1,5 @@
 <script>
+
 export default {
 	name: 'NavTop',
 	data() {
@@ -9,7 +10,7 @@ export default {
 	methods: {
 		closeMenu() {
 			this.toggle = !this.toggle
-		}
+		},
 	},
 }
 </script>
@@ -73,6 +74,7 @@ export default {
 		text-align: center;
 		width: 100%;
 		display: none;
+		z-index: 10000;
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
@@ -84,6 +86,7 @@ export default {
 		margin: 0 10px;
 		line-height: 9vh;
 		display: block;
+		z-index: 10000;
 		border-bottom: 1px solid #EAEAEB;
   }
   .hamburger {
@@ -124,6 +127,7 @@ export default {
   }
   #toggle:checked + .hamburger + .nav-top  {
 		display: block;
+		z-index: 10000;
   }
 
 	@media only screen and (max-width: 350px) {
