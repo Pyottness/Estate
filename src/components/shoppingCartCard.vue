@@ -68,9 +68,20 @@ export default {
     }
 },
 methods: {
-   purchase() {
-     alert('This is not a real website!! It is just for show!!!')
-  },
+  // purchase() {
+  //   alert('This is not a real website!! It is just for show!!!')
+  //},
+	async purchase() {
+      try {
+        await fetch("https://icanhazdadjoke.com/", {
+				headers: { 'Accept': 'application/json' },}).then(res=>res.json()).then((response) => {
+					const jokes = response.joke;
+					alert(jokes)
+				});
+      } catch (error) {
+        alert('Looks like there was a problem: \n', error);
+      }
+    },
   },
 }
 </script>
