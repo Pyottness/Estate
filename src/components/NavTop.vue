@@ -47,12 +47,14 @@ export default {
 		font-family: fangsong;
 		line-height: 10px;
 		padding-left: 10px;
+		-webkit-tap-highlight-color: transparent;
 	}
 	.logo{
 		float: left;
 		width: 90px;
 		height: 70px;
 		padding-left: 10px;
+		-webkit-tap-highlight-color: transparent;
 	}
   nav {
 		position: fixed;
@@ -64,6 +66,7 @@ export default {
 		text-align: right;
 		height: 70px;
 		line-height: 70px;
+		-webkit-tap-highlight-color: transparent;
   }
   .nav-top {
 		margin: 0 30px 0 0;
@@ -78,6 +81,7 @@ export default {
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
+		-webkit-tap-highlight-color: transparent;
   }
   .nav-top a {
 		clear: right;
@@ -88,6 +92,7 @@ export default {
 		display: block;
 		z-index: 10000;
 		border-bottom: 1px solid #EAEAEB;
+		-webkit-tap-highlight-color: transparent;
   }
   .hamburger {
 		position: fixed;
@@ -97,6 +102,7 @@ export default {
 		top: 25px;
 		right: 25px;
 		bottom: 0px;
+		-webkit-tap-highlight-color: transparent;
   }
   #toggle {
 		display: none;
@@ -110,6 +116,7 @@ export default {
 		-webkit-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
 		background-color: white;
+		-webkit-tap-highlight-color: transparent;
   }
   #toggle:checked + .hamburger .bar:nth-child(2) {
 		opacity: 0;
@@ -138,12 +145,14 @@ export default {
 			font-size: 1.1em;
 			font-family: fangsong;
 			padding-left: 5px;
+			-webkit-tap-highlight-color: transparent;
 		}
 		.logo{
 			float: left;
 			width: 90px;
 			height: 70px;
 			padding-left: 5px;
+			-webkit-tap-highlight-color: transparent;
 		}
 		.hamburger {
 			position: fixed;
@@ -151,6 +160,7 @@ export default {
 			top: 25px;
 			right: 15px;
 			bottom: 0px;
+			-webkit-tap-highlight-color: transparent;
 		}
 	}
 	@media only screen and (min-device-width: 351px) and (max-device-width: 600px) {
@@ -161,12 +171,14 @@ export default {
 			font-size: 1.8em;
 			font-family: fangsong;
 			padding-left: 5px;
+			-webkit-tap-highlight-color: transparent;
 		}
 		.logo{
 			float: left;
 			width: 90px;
 			height: 70px;
 			padding-left: 5px;
+			-webkit-tap-highlight-color: transparent;
 		}
 		.hamburger {
 			position: fixed;
@@ -174,6 +186,7 @@ export default {
 			top: 25px;
 			right: 15px;
 			bottom: 0px;
+			-webkit-tap-highlight-color: transparent;
 		}
 	}
 </style>

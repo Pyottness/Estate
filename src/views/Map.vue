@@ -4,6 +4,7 @@
       v-model="zoom"
       v-model:zoom="zoom"
       :center="[40.4637, -3.7492]"
+      :style="{ zIndex: 0 }"
     >
       <l-tile-layer
         :url="url" :subdomains="subdomains"

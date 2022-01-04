@@ -37,17 +37,21 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
+	-webkit-tap-highlight-color: transparent;
 }
 .material-design-icon.icon-4x {
   height: 4em;
   width: 4em;
+	-webkit-tap-highlight-color: transparent;
 }
 .material-design-icon.icon-4x > .material-design-icon__svg {
   height: 4em;
   width: calc(100% / 4);
 	color: white;
+	-webkit-tap-highlight-color: transparent;
 }
 .exact-active > .material-design-icon.icon-4x > .material-design-icon__svg {
 	color: yellow;
+	-webkit-tap-highlight-color: transparent;
 }
 </style>

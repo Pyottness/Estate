@@ -17,13 +17,13 @@ export default {
 },
 }
 </script>
-    <template>
-
+<template>
+    
     <NavTop />
     <router-view />
     <Footer />
 
-    </template>
+</template>
 
   <style>
 
